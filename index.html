@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Smita Dental Care Centre | Vashi Sector 17</title>
+<meta name="description" content="Trusted family dental care in Vashi Sec-17 since 1999. Smile makeovers, whitening, implants & full mouth rehab. Call or WhatsApp to book by appointment." />
+<meta name="theme-color" content="#6b2d45" />
+<meta property="og:title" content="Smita Dental Care Centre · Vashi" />
+<meta property="og:description" content="Calm premium dentistry in Sector 17, Vashi — Call or WhatsApp to book." />
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --wine:#6b2d45;--wine-2:#521f34;--rose:#b85a72;--blush:#f0c9d0;
+  --ink:#2a1620;--muted:#7a5a66;--line:#ead9de;--bg:#faf5f3;--card:#fff;
+  --soft:#f8e9ed;--wa:#1f9e4b;--side:20px;--radius:1.1rem;
+  --shadow:0 14px 44px rgba(107,45,69,.08);
+  --shadow-h:0 22px 56px rgba(107,45,69,.14);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--ink);background:var(--bg);
+  line-height:1.55;overflow-x:hidden;
+  padding-left:max(var(--side),env(safe-area-inset-left,0px));
+  padding-right:max(var(--side),env(safe-area-inset-right,0px));
+  padding-bottom:5.5rem;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.shell{width:100%;max-width:1100px;margin:0 auto}
+
+@keyframes kenBurns{from{transform:scale(1.04)}to{transform:scale(1.12)}}
+@keyframes drawLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes softPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.25);opacity:.65}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .hero-media img{animation:none!important}
+}
+
+header{
+  position:sticky;top:0;z-index:50;
+  margin-left:calc(-1 * max(var(--side),env(safe-area-inset-left,0px)));
+  margin-right:calc(-1 * max(var(--side),env(safe-area-inset-right,0px)));
+  padding-left:max(var(--side),env(safe-area-inset-left,0px));
+  padding-right:max(var(--side),env(safe-area-inset-right,0px));
+  background:rgba(250,245,243,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s ease,background .3s ease,box-shadow .3s ease;
+}
+header.scrolled{border-bottom-color:var(--line);background:rgba(255,255,255,.95);box-shadow:0 4px 22px rgba(107,45,69,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4rem;max-width:1100px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:.75rem;min-width:0}
+.brand img{width:2.45rem;height:2.45rem;border-radius:.7rem;flex-shrink:0;box-shadow:0 6px 16px rgba(107,45,69,.28);transition:transform .35s var(--ease)}
+.brand:hover img{transform:translateY(-2px)}
+.brand strong{display:block;font-size:.92rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand span{display:block;font-size:.7rem;font-weight:500;color:var(--muted)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.45rem;
+  border-radius:999px;padding:.85rem 1.25rem;font-weight:600;font-size:.92rem;border:0;cursor:pointer;
+  position:relative;overflow:hidden;
+  transition:transform .25s var(--ease),box-shadow .25s ease,background .25s ease,filter .25s ease;
+}
+.btn::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.22) 50%,transparent 70%);
+  transform:translateX(-120%);transition:transform .55s var(--ease);
+}
+.btn:hover::after{transform:translateX(120%)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn svg{width:1.05rem;height:1.05rem;flex-shrink:0}
+.btn-sm{padding:.65rem 1rem;font-size:.86rem}
+.btn-primary{background:var(--wine);color:#fff;box-shadow:0 10px 28px rgba(107,45,69,.28)}
+.btn-primary:hover{background:var(--wine-2)}
+.btn-blush{background:linear-gradient(135deg,#f7dde2,var(--blush));color:var(--wine-2);box-shadow:0 10px 28px rgba(240,201,208,.45)}
+.btn-blush:hover{filter:brightness(1.04)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 28px rgba(31,158,75,.28)}
+.btn-wa:hover{background:#188a3f}
+
+.hero{padding:1.1rem 0 0}
+.hero-frame{position:relative;border-radius:1.35rem;overflow:hidden;box-shadow:var(--shadow-h);min-height:400px;background:var(--wine)}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 30%;animation:kenBurns 22s ease-in-out infinite alternate}
+.hero-overlay{
+  position:relative;z-index:1;min-height:400px;
+  display:flex;flex-direction:column;justify-content:flex-end;gap:.85rem;
+  padding:1.6rem 1.25rem 1.5rem;
+  background:linear-gradient(180deg,rgba(107,45,69,.12) 0%,rgba(82,31,52,.55) 40%,rgba(42,22,32,.94) 100%);
+  color:#fff;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.55rem;align-self:flex-start;
+  font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--blush);background:rgba(42,22,32,.45);border:1px solid rgba(240,201,208,.35);
+  padding:.4rem .75rem;border-radius:999px;backdrop-filter:blur(8px);
+}
+.eyebrow i{width:.45rem;height:.45rem;border-radius:50%;background:var(--blush);display:block;animation:softPulse 2.2s ease infinite;box-shadow:0 0 0 4px rgba(240,201,208,.25)}
+.hero h1{
+  margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;
+  font-size:clamp(1.75rem,5.5vw,2.7rem);line-height:1.12;letter-spacing:-.02em;max-width:16ch;
+}
+.hero-sub{margin:0;max-width:38ch;color:rgba(255,255,255,.84);font-size:.98rem}
+.hero-cta{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-top:.25rem}
+
+.trust{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1rem}
+.trust-item{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1rem 1.05rem;box-shadow:var(--shadow);
+  transition:transform .3s var(--ease),box-shadow .3s ease;
+}
+.trust-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
+.trust-item b{display:block;font-size:1.05rem;font-weight:700;color:var(--wine);letter-spacing:-.01em}
+.trust-item span{display:block;font-size:.78rem;color:var(--muted);margin-top:.2rem}
+
+section{padding:2.6rem 0 0}
+.section-head{margin-bottom:1.25rem}
+.section-head .label{
+  display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--rose);margin-bottom:.35rem;
+}
+.section-head h2{
+  margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.45rem,3.8vw,1.95rem);
+  letter-spacing:-.02em;color:var(--wine);line-height:1.2;
+}
+.section-head p{margin:.45rem 0 0;color:var(--muted);max-width:48ch}
+.accent-line{
+  display:block;width:3rem;height:3px;border-radius:2px;margin-top:.85rem;
+  background:linear-gradient(90deg,var(--rose),transparent);transform-origin:left;
+}
+.reveal.in .accent-line{animation:drawLine .7s var(--ease) .15s both}
+
+.cats{display:grid;gap:1rem}
+.cat{
+  position:relative;border-radius:1.2rem;overflow:hidden;min-height:210px;
+  box-shadow:var(--shadow);border:1px solid var(--line);
+  transition:transform .35s var(--ease),box-shadow .35s ease;
+}
+.cat:hover{transform:translateY(-4px);box-shadow:var(--shadow-h)}
+.cat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.cat:hover img{transform:scale(1.05)}
+.cat-body{
+  position:relative;z-index:1;min-height:210px;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:1.2rem;color:#fff;
+  background:linear-gradient(180deg,transparent 18%,rgba(42,22,32,.9) 100%);
+}
+.cat-body h3{margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.3rem}
+.cat-body p{margin:.3rem 0 0;font-size:.88rem;color:rgba(255,255,255,.84)}
+.cat-tag{
+  align-self:flex-start;margin-bottom:.55rem;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--wine-2);background:var(--blush);padding:.28rem .6rem;border-radius:999px;
+}
+
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1rem}
+.svc{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1rem 1.05rem;box-shadow:var(--shadow);
+  transition:transform .3s var(--ease),box-shadow .3s ease;
+}
+.svc:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
+.svc strong{display:block;font-size:.92rem;color:var(--wine);margin-bottom:.25rem}
+.svc span{display:block;font-size:.8rem;color:var(--muted);line-height:1.45}
+
+.split{display:grid;gap:1.1rem}
+.split-media{border-radius:1.2rem;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);min-height:260px}
+.split-media img{width:100%;height:100%;object-fit:cover;min-height:260px}
+.docs{display:grid;gap:.85rem}
+.doc{
+  background:var(--card);border:1px solid var(--line);border-radius:1.2rem;padding:1.25rem 1.2rem;
+  box-shadow:var(--shadow);transition:transform .3s var(--ease),box-shadow .3s ease;
+}
+.doc:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
+.doc h3{margin:0 0 .25rem;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.2rem;color:var(--wine)}
+.doc .role{margin:0 0 .75rem;color:var(--rose);font-weight:600;font-size:.86rem}
+.doc p{margin:0;color:var(--muted);font-size:.9rem}
+.doc .reg{
+  display:inline-block;margin-top:.85rem;font-size:.75rem;font-weight:600;font-family:ui-monospace,monospace;
+  color:var(--wine);background:var(--soft);border:1px solid var(--line);border-radius:.55rem;padding:.35rem .65rem;
+}
+
+.banner{
+  border-radius:1.35rem;padding:1.6rem 1.3rem;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--wine) 0%,#8a3d58 55%,#a34d6a 100%);
+  color:#fff;box-shadow:var(--shadow-h);
+}
+.banner::before{
+  content:"";position:absolute;inset:auto -20% -40% 40%;height:180%;
+  background:radial-gradient(circle,rgba(240,201,208,.28),transparent 60%);pointer-events:none;
+}
+.banner h2{margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.35rem,3.5vw,1.8rem);position:relative;z-index:1}
+.banner p{margin:.45rem 0 1.1rem;color:rgba(255,255,255,.82);position:relative;z-index:1;max-width:40ch}
+.banner-actions{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;position:relative;z-index:1}
+
+.info-strip{display:grid;gap:.75rem;margin-top:1rem}
+.info-row{
+  display:flex;gap:.85rem;align-items:flex-start;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1rem 1.05rem;box-shadow:var(--shadow);
+}
+.info-row svg{width:1.25rem;height:1.25rem;flex-shrink:0;color:var(--rose);margin-top:.1rem}
+.info-row strong{display:block;font-size:.88rem;color:var(--wine)}
+.info-row span,.info-row a{display:block;font-size:.86rem;color:var(--muted);margin-top:.15rem}
+.info-row a{text-decoration:underline;text-underline-offset:2px}
+.info-row a:hover{color:var(--wine)}
+
+.map{
+  border-radius:1.2rem;overflow:hidden;border:1px solid var(--line);background:var(--soft);box-shadow:var(--shadow);
+  transition:box-shadow .3s ease,transform .3s var(--ease);
+}
+.map:hover{box-shadow:var(--shadow-h);transform:translateY(-2px)}
+.map iframe{width:100%;height:250px;border:0;display:block}
+.note{margin:.85rem 0 0;color:var(--muted);font-size:.82rem}
+.note a{text-decoration:underline;text-underline-offset:2px}
+.note a:hover{color:var(--wine)}
+
+footer{
+  padding:2.25rem 0 calc(2.25rem + env(safe-area-inset-bottom,0px));
+  margin-top:2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;
+}
+.foot{display:grid;gap:1rem}
+.credit a{text-decoration:underline;text-underline-offset:2px}
+.credit a:hover{color:var(--wine)}
+
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  padding:.75rem max(var(--side),env(safe-area-inset-left,0px)) calc(.75rem + env(safe-area-inset-bottom,0px)) max(var(--side),env(safe-area-inset-right,0px));
+  background:rgba(255,255,255,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:.55rem;
+  transform:translateY(110%);transition:transform .4s var(--ease);
+}
+.sticky-cta.show{transform:translateY(0)}
+
+@media (min-width:640px){
+  :root{--side:28px}
+  .hero-frame,.hero-overlay{min-height:460px}
+  .trust{grid-template-columns:repeat(4,1fr)}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .cat,.cat-body{min-height:240px}
+  .svc-grid{grid-template-columns:repeat(4,1fr)}
+  .split{grid-template-columns:1fr 1fr;align-items:stretch}
+  .split-media,.split-media img{min-height:100%;height:100%}
+  .docs{grid-template-columns:1fr 1fr}
+  .sticky-cta{display:none}
+  body{padding-bottom:0}
+}
+@media (min-width:900px){
+  :root{--side:40px}
+  .hero-overlay{padding:2.35rem 2.1rem}
+  .cats{grid-template-columns:repeat(4,1fr)}
+  .map iframe{height:310px}
+  .foot{grid-template-columns:1fr auto;align-items:start}
+  .info-strip{grid-template-columns:1fr 1fr}
+}
+@media (max-width:380px){
+  .brand span{display:none}
+  .hero-cta{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header id="site-header">
+  <div class="nav shell">
+    <a class="brand" href="#top">
+      <img src="assets/mark.svg" alt="" width="40" height="40" />
+      <div>
+        <strong>Smita Dental Care</strong>
+        <span>Vashi · Sector 17</span>
+      </div>
+    </a>
+    <a class="btn btn-primary btn-sm" href="tel:+919820038865">Call</a>
+  </div>
+</header>
+
+<main class="shell" id="top">
+  <section class="hero">
+    <div class="hero-frame">
+      <div class="hero-media">
+        <img src="assets/hero.jpg" alt="Dentist explaining a dental X-ray to a patient in a modern clinic" width="1600" height="1067" />
+      </div>
+      <div class="hero-overlay">
+        <div class="eyebrow"><i></i> Shiv Center · Sector 17, Vashi</div>
+        <h1>Trusted family dental care in the heart of Vashi</h1>
+        <p class="hero-sub">Calm, appointment-led dentistry since 1999 — smile makeovers, whitening, implants and full mouth rehab. Book by Call or WhatsApp.</p>
+        <div class="hero-cta">
+          <a class="btn btn-blush" href="tel:+919820038865">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8Z"/></svg>
+            Call now
+          </a>
+          <a class="btn btn-wa" href="https://wa.me/919820038865?text=Hi%20Smita%20Dental%20Care%20Centre%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2Zm0 2a8 8 0 0 1 6.8 12.2l-.3.5.8 2.9-3-.8-.5.3A8 8 0 1 1 12 4Zm-3.2 3.2c.2 0 .5 0 .7.2l1.1 2.5c.1.3 0 .6-.2.8l-.7.8c.7 1.4 1.9 2.5 3.3 3.2l.9-.8c.2-.2.5-.3.8-.2l2.5 1.1c.4.2.5.6.4 1-.4 1.5-1.8 2.4-3.3 2.1-3.5-.7-6.4-3.6-7.1-7.1-.3-1.5.6-2.9 2.1-3.3.1 0 .2 0 .3 0Z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="trust">
+      <div class="trust-item reveal"><b>Since 1999</b><span>25+ years in Vashi</span></div>
+      <div class="trust-item reveal d1"><b>Specialists</b><span>Under one roof</span></div>
+      <div class="trust-item reveal d2"><b>New clinic</b><span>Shiv Center Sec-17</span></div>
+      <div class="trust-item reveal d3"><b>Mon–Sat</b><span>Morning &amp; evening</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head reveal">
+      <span class="label">Calm care, Vashi trust</span>
+      <h2>Dentistry families return to — generation after generation</h2>
+      <p>From everyday comfort to smile makeovers and implants — ethical, personalised treatment in a warm, modern setting near Palm Beach Road.</p>
+      <span class="accent-line" aria-hidden="true"></span>
+    </div>
+    <div class="cats">
+      <article class="cat reveal">
+        <img src="assets/implants.jpg" alt="Clear aligner smile treatment close-up" width="1400" height="933" loading="lazy" />
+        <div class="cat-body">
+          <span class="cat-tag">Smile</span>
+          <h3>Smile makeovers</h3>
+          <p>Designed smiles with careful planning — aesthetics that still feel natural.</p>
+        </div>
+      </article>
+      <article class="cat reveal d1">
+        <img src="assets/whitening.jpg" alt="Bright modern dental operatory with treatment chair" width="1400" height="933" loading="lazy" />
+        <div class="cat-body">
+          <span class="cat-tag">Whitening</span>
+          <h3>Tooth whitening</h3>
+          <p>Professional brightening in a calm clinic — safe protocols, clearer results.</p>
+        </div>
+      </article>
+      <article class="cat reveal d2">
+        <img src="assets/care.jpg" alt="Dentist reviewing 3D dental imaging scans" width="1400" height="933" loading="lazy" />
+        <div class="cat-body">
+          <span class="cat-tag">Implants</span>
+          <h3>Dental implants</h3>
+          <p>Replace missing teeth with precision planning and digital diagnostics.</p>
+        </div>
+      </article>
+      <article class="cat reveal d3">
+        <img src="assets/clinic.jpg" alt="Premium dental clinic treatment room" width="1400" height="933" loading="lazy" />
+        <div class="cat-body">
+          <span class="cat-tag">Rehab</span>
+          <h3>Full mouth rehabilitation</h3>
+          <p>Comprehensive rebuilds for comfort, function and lasting confidence.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="svc-grid">
+      <div class="svc reveal"><strong>Digital X-rays (RVG)</strong><span>AERB-certified radiovisiography for lower-dose, clearer diagnosis.</span></div>
+      <div class="svc reveal d1"><strong>Intraoral camera</strong><span>See what your dentist sees — clearer conversations about care.</span></div>
+      <div class="svc reveal d2"><strong>Private treatment rooms</strong><span>Hygienic rooms for asepsis, comfort and patient privacy.</span></div>
+      <div class="svc reveal d3"><strong>UPI &amp; cards accepted</strong><span>Economical pricing with major cards and UPI payments.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head reveal">
+      <span class="label">Your dentists</span>
+      <h2>Dr Gaurang Mistry &amp; Dr Raina Mistry</h2>
+      <p>Experienced dental surgeons trusted by Vashi families — named across public patient testimonials on the clinic’s own site.</p>
+      <span class="accent-line" aria-hidden="true"></span>
+    </div>
+    <div class="split">
+      <div class="split-media reveal">
+        <img src="assets/hero.jpg" alt="Patient consultation with digital dental X-ray review" width="1600" height="1067" loading="lazy" />
+      </div>
+      <div class="docs">
+        <article class="doc reveal d1">
+          <h3>Dr Gaurang Mistry</h3>
+          <p class="role">Dental surgeon · Smita Dental Care Centre</p>
+          <p>Known for thorough diagnosis and full-mouth planning — the steady hand patients recommend to family.</p>
+        </article>
+        <article class="doc reveal d2">
+          <h3>Dr Raina Mistry</h3>
+          <p class="role">Dental surgeon · Partner in care</p>
+          <p>Partner in personalised treatment and patient comfort — care that feels unrushed and clear.</p>
+        </article>
+        <article class="doc reveal d3">
+          <h3>Appointment-only clinic</h3>
+          <p class="role">Respect for your time</p>
+          <p>Treatment is strictly by prior appointment — so you are seen promptly in a relaxed, private room.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="banner">
+      <h2>Ready for calmer dental care?</h2>
+      <p>Call or WhatsApp to book — mornings and evenings, Monday to Saturday.</p>
+      <div class="banner-actions">
+        <a class="btn btn-blush" href="tel:+919820038865">Call +91 98200 38865</a>
+        <a class="btn btn-wa" href="https://wa.me/919820038865?text=Hi%20Smita%20Dental%20Care%20Centre%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head reveal">
+      <span class="label">Visit / contact</span>
+      <h2>Shiv Center Building, Sector 17, Vashi</h2>
+      <p>Office no. 211, 2nd Floor, Plot-72, Shiv Center Building, Sector-17, Vashi, Navi Mumbai- 400703</p>
+      <span class="accent-line" aria-hidden="true"></span>
+    </div>
+    <div class="map reveal">
+      <iframe title="Smita Dental Care Centre Vashi Sector 17 map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Office%20no.%20211%20Shiv%20Center%20Building%20Plot-72%20Sector-17%20Vashi%20Navi%20Mumbai%20400703&t=&z=16&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+    <div class="info-strip">
+      <div class="info-row reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+        <div>
+          <strong>Phones</strong>
+          <a href="tel:+919820038865">+91 98200 38865</a>
+          <a href="tel:+912235938641">022-3593 8641</a>
+        </div>
+      </div>
+      <div class="info-row reveal d1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+        <div>
+          <strong>Email</strong>
+          <a href="mailto:smitadentalcare@gmail.com">smitadentalcare@gmail.com</a>
+        </div>
+      </div>
+      <div class="info-row reveal d2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div>
+          <strong>Hours</strong>
+          <span>Mon–Sat · 10:30 am – 2:00 pm</span>
+          <span>5:00 pm – 9:00 pm · Sunday closed</span>
+        </div>
+      </div>
+      <div class="info-row reveal d3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <div>
+          <strong>Landmark</strong>
+          <span>~100 m from Palm Beach Road</span>
+          <span>~1.5 km from Vashi Railway Station</span>
+        </div>
+      </div>
+    </div>
+    <p class="note">
+      Smita Dental Care Centre · Trusted dental care since 10 Jan 1999 ·
+      Treatment by prior appointment only ·
+      Landline: <a href="tel:+912235938641">022-3593 8641</a>
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div class="shell foot">
+    <div>
+      <strong style="color:var(--wine)">Smita Dental Care Centre</strong><br />
+      Sector 17, Vashi, Navi Mumbai 400703<br />
+      © <span id="y"></span> All rights reserved.
+    </div>
+    <div class="credit">
+      Built free by Techeeez · <a href="https://techeeez.com" target="_blank" rel="noopener">https://techeeez.com</a>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+  <a class="btn btn-primary btn-sm" href="tel:+919820038865">Call</a>
+  <a class="btn btn-wa btn-sm" href="https://wa.me/919820038865?text=Hi%20Smita%20Dental%20Care%20Centre%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+document.getElementById("y").textContent = new Date().getFullYear();
+const header = document.getElementById("site-header");
+const sticky = document.getElementById("sticky-cta");
+const onScroll = () => {
+  const y = window.scrollY || 0;
+  header.classList.toggle("scrolled", y > 8);
+  sticky.classList.toggle("show", y > 280);
+  sticky.setAttribute("aria-hidden", y > 280 ? "false" : "true");
+};
+window.addEventListener("scroll", onScroll, { passive: true });
+onScroll();
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) {
+      e.target.classList.add("in");
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+</script>
+</body>
+</html>
